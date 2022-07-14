@@ -25,7 +25,7 @@ Clone the GitHub Repo https://github.com/amitpawarcbg/NFS-storageclass.git
 * kubectl apply -f class.yaml
 * vi deployment.yaml >> #change the nfs server IP and NFS path
 * kubectl apply -f deployment.yaml
-* kubectl get pods ##Check for the nfs-client-provisioner pod status
+* kubectl get pods | grep nfs-client-provisioner ##Check for the nfs-client-provisioner pod status
 * kubectl get sc
 * kubectl apply -f test-claim.yaml ##To test by creating sample pvc.
 * kubectl get pvc
