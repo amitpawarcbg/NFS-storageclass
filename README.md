@@ -16,7 +16,7 @@ You may change the name of the NFS share as per your requirement.
 * exportfs -rav
 
 Deploy NFS provisioner -
-
+On Master node execute below commands to setup NFS provisioner.
 Clone the GitHub Repo https://github.com/amitpawarcbg/NFS-storageclass.git
 
 * git clone https://github.com/amitpawarcbg/NFS-storageclass.git
