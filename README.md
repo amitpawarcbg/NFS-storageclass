@@ -4,6 +4,9 @@ GitHub Repo - https://github.com/amitpawarcbg/NFS-storageclass.git
 
 Setup NFS server on ubuntu Linux -
 
+On node for which you need to setup NFS server run below commands to configure NFS server.
+You may change the name of the NFS share as per your requirement.
+
 * apt install nfs-server
 * apt install nfs-common
 * mkdir -p /nfs/kubedata; chown nobody /nfs/kubedata
