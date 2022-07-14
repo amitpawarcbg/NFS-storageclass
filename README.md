@@ -20,7 +20,7 @@ On Master node execute below commands to setup NFS provisioner.
 Clone the GitHub Repo https://github.com/amitpawarcbg/NFS-storageclass.git
 
 * git clone https://github.com/amitpawarcbg/NFS-storageclass.git
-* cd /NFS-storageclass
+* cd NFS-storageclass
 * kubectl apply -f rbac.yaml
 * kubectl apply -f class.yaml
 * vi deployment.yaml >> #change the nfs server IP and NFS path
