@@ -1,5 +1,6 @@
 Dynamic NFS provisioning in Kubernetes
 
+
 GitHub Repo - https://github.com/amitpawarcbg/NFS-storageclass.git
 
 Setup NFS server on ubuntu Linux -
@@ -29,3 +30,21 @@ Clone the GitHub Repo https://github.com/amitpawarcbg/NFS-storageclass.git
 * kubectl get sc
 * kubectl apply -f test-claim.yaml ##To test by creating sample pvc.
 * kubectl get pvc
+
+---
+
+# Using Helm
+
+* helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/
+
+* helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner \
+    --set nfs.server=192.168.1.101 \
+    --set nfs.path=/nfs/kubedata
+    
+To make is default SC for your cluster.
+
+* kubectl edit sc nfs-client
+
+Add below annotations under Metadata.
+
+storageclass.kubernetes.io/is-default-class: "true"
