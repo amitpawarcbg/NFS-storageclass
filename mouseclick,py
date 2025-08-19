@@ -1,0 +1,18 @@
+import pyautogui
+import random
+import time
+
+# Set the screen size (you can adjust these values)
+screen_width, screen_height = pyautogui.size()
+
+while True:
+    # Generate random coordinates
+    x = random.randint(0, screen_width - 1)
+    y = random.randint(0, screen_height - 1)
+    
+    # Move the mouse and click
+    pyautogui.moveTo(x, y, duration=0.5)
+    pyautogui.click()
+    
+    # Wait for a random time between clicks
+    time.sleep(random.uniform(0.5, 2))
